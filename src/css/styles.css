@@ -9,6 +9,7 @@
   color: #ffffff;
 }
 
+/* root level links */
 .links {
   background-color: #f99;
   border: 1px solid black;
@@ -29,6 +30,7 @@
   display: block;
 }
 
+/* nested sublinks */
 .sub-links {
   background-color: #fcc;
   margin:4px;
