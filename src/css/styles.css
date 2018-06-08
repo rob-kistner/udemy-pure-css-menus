@@ -1,44 +1,25 @@
-.hoverable {
-  background-color: #F99;
-  padding: 20px;
-  width: 150px;
-  text-align: center;
-}
-.hoverable:hover {
-  background-color: #222;
-  color: #ffffff;
-}
+@import "./reset.css";
 
-/*
-  The direct selector ">":
-  only targets the direct descendants. 
-  So the 2nd ul below is not affected 
-  by the next rule
-*/
-body > ul {
-  background-color: #f99;
+
+.tabs {
+  border: 4px solid #CCC;
+  width: 400px;
+  margin: 0 auto;
+  padding: 0px;
+  list-style: none;
+}
+.tab {
   border: 1px solid black;
+  margin-bottom: 10px;
 }
-
-body > ul > li {
-  background-color: #9f9;
-  margin: 4px;
-}
-
-ul ul {
-  display: none;
-}
-
-/* nested sublinks */
-.sub-links {
-  background-color: #fcc;
-  margin:4px;
-  border: 1px solid black;
-  display: none;
-}
-.sub-link {
+.tab-name {
   background-color: #cfc;
-  /* separate elements */
-  margin:4px;
+}
+.tab-content {
+  background-color: #fcc;
+  display: none;
 }
 
+.tab:hover .tab-content {
+  display: block;
+}
