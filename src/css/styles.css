@@ -9,25 +9,24 @@
   color: #ffffff;
 }
 
-/* root level links */
-.links {
+/*
+  The direct selector ">":
+  only targets the direct descendants. 
+  So the 2nd ul below is not affected 
+  by the next rule
+*/
+body > ul {
   background-color: #f99;
   border: 1px solid black;
-  /* remove bullets */
-  list-style-type: none;
-  /* remove padding from left */
-  padding-left: 0;
 }
-.link {
+
+body > ul > li {
   background-color: #9f9;
-  /* separate elements */
   margin: 4px;
 }
-.link:hover {
-  padding-left: 5px;
-}
-.link:hover > .sub-links {
-  display: block;
+
+ul ul {
+  display: none;
 }
 
 /* nested sublinks */
