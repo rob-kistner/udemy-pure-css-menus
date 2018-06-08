@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Multi-Level Menu</title>
+	<style>
+	
+	.list,
+	.sublist {
+		margin:0;
+		padding:0;
+		list-style:none;
+	}
+
+	.list {
+		background:#FCC;
+		padding:10px;
+		display:inline-table;
+	}
+	.list a {
+		color:black;
+		text-decoration: none;
+	}
+	.list-item {
+		font-size:20px;
+		position:relative;
+	}
+	.list-item > a {
+		display:block;
+		background:#DAA;
+		padding:8px 20px;
+	}
+	.list-item:hover {
+		background:#A88;
+	}
+	.sublist {
+		background:#B99;
+		display:inline-table;
+		position:absolute;
+		top:0;
+		left:100%;
+		white-space:nowrap;
+		display:none;
+	}
+	.sublist-item {
+		border-top:1px solid #A77;
+	}
+	.sublist-item > a {
+		display:block;
+		padding:4px 16px;
+	}
+	.sublist-item:first-child {
+		border-top:none;
+	}
+	.sublist-item:hover {
+		background:#A88;
+	}
+
+	.list-item:hover > .sublist {
+		display:block;
+	}
+	.sublist-item:hover > .sublist {
+		display:block;
+	}
+
+
+	
+
+	</style>
+</head>
+<body>
+	<ul class="list">
+		<li class="list-item"><a href="#">Home</a></li>
+		<li class="list-item"><a href="#">About</a>
+			<ul class="sublist">
+				<li class="sublist-item"><a href="#">The Artist</a></li>
+				<li class="sublist-item"><a href="#">The Record</a></li>
+				<li class="sublist-item"><a href="#">The Music</a></li>
+			</ul>
+		</li>
+		<li class="list-item"><a href="#">Media</a>
+			<ul class="sublist">
+				<li class="sublist-item"><a href="#">Audio Clips</a>
+					<ul class="sublist">
+						<li class="sublist-item"><a href="#">Music</a>
+							<ul class="sublist">
+								<li class="sublist-item"><a href="#">Album 1</a>
+								<li class="sublist-item"><a href="#">Album 2</a>
+								<li class="sublist-item"><a href="#">Album 3</a>
+								<li class="sublist-item"><a href="#">Album 4</a>
+							</ul>
+						</li>
+						<li class="sublist-item"><a href="#">Interviews</a></li>
+						<li class="sublist-item"><a href="#">Bloopers</a></li>
+					</ul>
+				</li>
+				<li class="sublist-item"><a href="#">Video Clips</a></li>
+			</ul>
+		</li>
+		<li class="list-item"><a href="#">Press</a>
+			<ul class="sublist">
+				<li class="sublist-item"><a href="#">Print Materials</a></li>
+				<li class="sublist-item"><a href="#">Graphics Materials</a></li>
+			</ul>
+		</li>
+		<li class="list-item"><a href="#">Contact</a>
+			<ul class="sublist">
+				<li class="sublist-item"><a href="#">The Artist</a></li>
+				<li class="sublist-item"><a href="#">The Publicity Person</a></li>
+				<li class="sublist-item"><a href="#">The Record Label</a></li>
+			</ul>
+		</li>
+	</ul>
+</body>
+</html>

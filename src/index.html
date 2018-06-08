@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hover</title>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+  <div class="hoverable">Hover over me!</div>
+  <hr>
+  <ul class="links">
+    <li class="link">Item 1</li>
+    <li class="link">Item 2</li>
+    <li class="link">Item 3</li>
+    <li class="link">Item 4</li>
+    <!--
+      The key to CSS3 only menus at this point
+      is having ul.sub-links contained within it.
+      That way, hovering on the parent li.link will 
+      continue until you actually exit the region 
+      of that li.link itself
+    -->
+    <li class="link">Item 5
+      <ul class="sub-links">
+        <li class="sub-link">Item 5-1</li>
+        <li class="sub-link">Item 5-2</li>
+        <li class="sub-link">Item 5-3</li>
+      </ul>
+    </li>
+  </ul>
+</body>
+</html>
