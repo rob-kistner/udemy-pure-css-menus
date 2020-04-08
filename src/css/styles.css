@@ -2,24 +2,63 @@
 
 
 .tabs {
-  border: 4px solid #CCC;
+  border: 4px solid rgba(0,0,0,0.5);
   width: 400px;
   margin: 0 auto;
   padding: 0px;
   list-style: none;
+  border-radius: 10px;
 }
 .tab {
-  border: 1px solid black;
-  margin-bottom: 10px;
+  border: 1px solid #aaa;
+}
+.tab:first-child .tab-name {
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+.tab:last-child .tab-name {
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.tab:last-child {
+  border-bottom: none;
 }
 .tab-name {
   background-color: #cfc;
+  font-size: 24px;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(255,255,255,0.5);
 }
 .tab-content {
   background-color: #fcc;
   display: none;
 }
-
 .tab:hover .tab-content {
   display: block;
+}
+
+/* hide all .tab when parent is hovered */
+.tabs:hover .tab {
+  display: none;
+}
+/* show only the hovered tab in the set when hovered */
+.tabs:hover .tab:hover {
+  display: block;
+}
+
+.coolbox {
+  display: block; 
+  height: 200px;
+  width: 350px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 5rem auto;
+
+  box-shadow:
+    0 0 1px rgba(0,0,0,0.3),
+    0 3px 2px rgba(0,0,0,0.3),
+    0 7px 6px rgba(0,0,0,0.2),
+    0 12px 12px rgba(0,0,0,0.1),
+    0 0 25px rgba(0,0,0,0.1)
+    ;
 }
